@@ -16303,6 +16303,16 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "/Users/kevincastro/Desktop/BYU-I/Spring 2022/NET Development 365/MegaDesk-Razor/Pages/DeskQuotes/Delete.cshtml",
+      "TargetPath": "Pages\\DeskQuotes\\Delete.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/kevincastro/Desktop/BYU-I/Spring 2022/NET Development 365/MegaDesk-Razor/Pages/DeskQuotes/Create.cshtml",
+      "TargetPath": "Pages\\DeskQuotes\\Create.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "/Users/kevincastro/Desktop/BYU-I/Spring 2022/NET Development 365/MegaDesk-Razor/Pages/_ViewImports.cshtml",
       "TargetPath": "Pages\\_ViewImports.cshtml",
       "FileKind": "mvc"
@@ -16310,6 +16320,11 @@
     {
       "FilePath": "/Users/kevincastro/Desktop/BYU-I/Spring 2022/NET Development 365/MegaDesk-Razor/Pages/_ViewStart.cshtml",
       "TargetPath": "Pages\\_ViewStart.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/kevincastro/Desktop/BYU-I/Spring 2022/NET Development 365/MegaDesk-Razor/Pages/DeskQuotes/Details.cshtml",
+      "TargetPath": "Pages\\DeskQuotes\\Details.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -16323,6 +16338,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "/Users/kevincastro/Desktop/BYU-I/Spring 2022/NET Development 365/MegaDesk-Razor/Pages/DeskQuotes/Index.cshtml",
+      "TargetPath": "Pages\\DeskQuotes\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "/Users/kevincastro/Desktop/BYU-I/Spring 2022/NET Development 365/MegaDesk-Razor/Pages/Privacy.cshtml",
       "TargetPath": "Pages\\Privacy.cshtml",
       "FileKind": "mvc"
@@ -16330,6 +16350,11 @@
     {
       "FilePath": "/Users/kevincastro/Desktop/BYU-I/Spring 2022/NET Development 365/MegaDesk-Razor/Pages/Index.cshtml",
       "TargetPath": "Pages\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/kevincastro/Desktop/BYU-I/Spring 2022/NET Development 365/MegaDesk-Razor/Pages/DeskQuotes/Edit.cshtml",
+      "TargetPath": "Pages\\DeskQuotes\\Edit.cshtml",
       "FileKind": "mvc"
     }
   ],
