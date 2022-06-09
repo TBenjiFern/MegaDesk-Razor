@@ -1,27 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\benja\\Documents\\CIT 365\\MegaDesk\\MegaDesk.csproj": {}
+    "/Users/kevincastro/Desktop/BYU-I/Spring 2022/NET Development 365/MegaDesk-Razor/MegaDesk.csproj": {}
   },
   "projects": {
-    "C:\\Users\\benja\\Documents\\CIT 365\\MegaDesk\\MegaDesk.csproj": {
+    "/Users/kevincastro/Desktop/BYU-I/Spring 2022/NET Development 365/MegaDesk-Razor/MegaDesk.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\benja\\Documents\\CIT 365\\MegaDesk\\MegaDesk.csproj",
+        "projectUniqueName": "/Users/kevincastro/Desktop/BYU-I/Spring 2022/NET Development 365/MegaDesk-Razor/MegaDesk.csproj",
         "projectName": "MegaDesk",
-        "projectPath": "C:\\Users\\benja\\Documents\\CIT 365\\MegaDesk\\MegaDesk.csproj",
-        "packagesPath": "C:\\Users\\benja\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\benja\\Documents\\CIT 365\\MegaDesk\\obj\\",
+        "projectPath": "/Users/kevincastro/Desktop/BYU-I/Spring 2022/NET Development 365/MegaDesk-Razor/MegaDesk.csproj",
+        "packagesPath": "/Users/kevincastro/.nuget/packages/",
+        "outputPath": "/Users/kevincastro/Desktop/BYU-I/Spring 2022/NET Development 365/MegaDesk-Razor/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\benja\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/Users/kevincastro/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -57,7 +55,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.201/RuntimeIdentifierGraph.json"
         }
       }
     }
