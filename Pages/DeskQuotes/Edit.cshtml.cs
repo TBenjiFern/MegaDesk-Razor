@@ -20,9 +20,6 @@ namespace MegaDesk.Pages.DeskQuotes
             _context = context;
         }
 
-        // [BindProperty]
-        // public Desk Desk { get; set; }
-
         [BindProperty]
         public DeskQuote DeskQuote { get; set; } = default!;
 
@@ -33,17 +30,18 @@ namespace MegaDesk.Pages.DeskQuotes
                 return NotFound();
             }
 
-            // This might need an include
-            var deskquote = await _context.DeskQuote.Include( d => d.DeliveryType).Include(d => d.Desk).FirstOrDefaultAsync(m => m.DeskQuoteId == id);
+            var deskquote = await _context.DeskQuote
+                                .Include( d => d.DeliveryType)
+                                .Include(d => d.Desk)
+                                .FirstOrDefaultAsync(m => m.DeskQuoteId == id);
             if (deskquote == null)
             {
                 return NotFound();
             }
             DeskQuote = deskquote;
-            ViewData["DeliveryTypeId"] = new SelectList(_context.DeliveryType, "DeliveryTypeId", "DeliveryTypeId");
-            ViewData["DesktopMaterialId"] = new SelectList(_context.DesktopMaterial, "DesktopMaterialId", "DesktopMaterialId");
+            ViewData["DeliveryTypeId"] = new SelectList(_context.DeliveryType, "DeliveryTypeId", "DeliveryName");
+            ViewData["DesktopMaterialId"] = new SelectList(_context.DesktopMaterial, "DesktopMaterialId", "DesktopMaterialName");
 
-            //    ViewData["DeskId"] = new SelectList(_context.Set<Desk>(), "DeskId", "DeskId");
             return Page();
         }
 
@@ -56,10 +54,17 @@ namespace MegaDesk.Pages.DeskQuotes
                 return Page();
             }
 
-            _context.Attach(DeskQuote).State = EntityState.Modified;
+            _context.Attach(DeskQuote.Desk).State = EntityState.Modified;
 
             try
             {
+                await _context.SaveChangesAsync();
+
+                DeskQuote.QuotePrice = DeskQuote.CalcTotalPrice(_context);
+
+                DeskQuote.QuoteDate = DateTime.Now;
+
+                _context.Attach(DeskQuote).State = EntityState.Modified;
                 await _context.SaveChangesAsync();
             }
             catch (DbUpdateConcurrencyException)
