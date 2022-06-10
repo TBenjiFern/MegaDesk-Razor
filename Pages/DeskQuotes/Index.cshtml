@@ -14,10 +14,14 @@
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.DeskQuote[0].CustomerName)
+                <a asp-page="./Index" asp-route-sortOrder="@Model.CustomerNameSort">
+                    @Html.DisplayNameFor(model => model.DeskQuote[0].CustomerName)
+                </a>
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.DeskQuote[0].QuoteDate)
+                <a asp-page="./Index" asp-route-sortOrder="@Model.DateSort">
+                    @Html.DisplayNameFor(model => model.DeskQuote[0].QuoteDate)
+                </a>
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.DeskQuote[0].QuotePrice)
