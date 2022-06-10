@@ -53,7 +53,7 @@ namespace MegaDesk.Pages.DeskQuotes
             {
                 return Page();
             }
-
+            
             _context.Attach(DeskQuote.Desk).State = EntityState.Modified;
 
             try

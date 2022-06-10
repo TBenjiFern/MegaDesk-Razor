@@ -45,7 +45,7 @@
                 @Html.DisplayFor(modelItem => item.QuotePrice)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.DeliveryType.DeliveryTypeId)
+                @Html.DisplayFor(modelItem => item.DeliveryType.DeliveryName)
             </td>
             <td>
                 <a asp-page="./Edit" asp-route-id="@item.DeskQuoteId">Edit</a> |
