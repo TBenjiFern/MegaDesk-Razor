@@ -40,6 +40,15 @@ namespace MegaDesk.Pages.DeskQuotes
                 return Page();
             }
 
+            _context.Desk.Add(Desk);
+            await _context.SaveChangesAsync();
+
+            DeskQuote.Desk = Desk;
+
+            DeskQuote.QuoteDate = DateTime.Now;
+
+            DeskQuote.QuotePrice = DeskQuote.CalcTotalPrice(_context);
+
             _context.DeskQuote.Add(DeskQuote);
             await _context.SaveChangesAsync();
 
