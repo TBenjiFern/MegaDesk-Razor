@@ -1,15 +1,25 @@
-@page
+@page "{searchString?}"
 @model MegaDesk.Pages.DeskQuotes.IndexModel
 
 @{
     ViewData["Title"] = "Index";
 }
 
-<h1>Index</h1>
+<div class="create-container">
+    <h1>Index</h1>
 
-<p>
-    <a asp-page="Create">Create New</a>
-</p>
+    <p>
+        <a asp-page="Create">Create New <i class="fa-solid fa-plus"></i></a>
+    </p>
+</div>
+
+<form>
+    <p>
+        Customer Name: <input type="text" asp-for="SearchString" />
+        <input type="submit" value="Filter" />
+    </p>
+</form>
+
 <table class="table">
     <thead>
         <tr>
@@ -48,9 +58,9 @@
                 @Html.DisplayFor(modelItem => item.DeliveryType.DeliveryName)
             </td>
             <td>
-                <a asp-page="./Edit" asp-route-id="@item.DeskQuoteId">Edit</a> |
-                <a asp-page="./Details" asp-route-id="@item.DeskQuoteId">Details</a> |
-                <a asp-page="./Delete" asp-route-id="@item.DeskQuoteId">Delete</a>
+                <a asp-page="./Edit" asp-route-id="@item.DeskQuoteId"><i class="fa-solid fa-pen"></i></a> |
+                <a asp-page="./Details" asp-route-id="@item.DeskQuoteId"><i class="fa-solid fa-info"></i></a> |
+                <a asp-page="./Delete" asp-route-id="@item.DeskQuoteId"><i class="fa-solid fa-trash"></i></a>
             </td>
         </tr>
 }

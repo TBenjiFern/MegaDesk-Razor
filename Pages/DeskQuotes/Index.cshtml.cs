@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using MegaDesk.Models;
 using MegaDesk.Data;
@@ -18,6 +19,9 @@ namespace MegaDesk.Pages.DeskQuotes
         {
             _context = context;
         }
+
+        [BindProperty(SupportsGet = true)]
+        public string SearchString { get; set; }
 
         public string CustomerNameSort { get; set; }
         public string DateSort { get; set; }
@@ -57,8 +61,12 @@ namespace MegaDesk.Pages.DeskQuotes
                     break;
             }
 
-            DeskQuote = await DeskQuoteOrdering.ToListAsync();
+            if (!string.IsNullOrEmpty(SearchString))
+            {
+                DeskQuoteOrdering = DeskQuoteOrdering.Where(s => s.CustomerName.Contains(SearchString));
+            }
 
+            DeskQuote = await DeskQuoteOrdering.ToListAsync();
         }
     }
 }
